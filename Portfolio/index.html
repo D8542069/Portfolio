@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +11,12 @@
 </head>
 <body>
     <header class="header">
+        <div class="header__logo">
+            <h1>
+                LOGO
+            </h1>
+        </div>
         <nav class="header__nav nav">
-            <ul class="nav__logo">
-                <h1>
-                    LOGO
-                </h1>
-            </ul>
             <ul class="nav__list list">
                 <li class="list__element"><a href="###">Home</a></li>
                 <li class="list__element"><a href="###">Services</a></li>
@@ -21,12 +24,56 @@
                 <li class="list__element"><a href="###">Portfolio</a></li>
                 <li class="list__element"><a href="###">Contact me</a></li>
             </ul>
-            <ul class="nav__btn-cont">
-                <button>
-                    Hire me
-                </button>
-            </ul>
         </nav>
+        <div class="header__btn-cont">
+            <button>
+                Hire me
+            </button>
+        </div>
     </header>
+    <main class="main">
+        <section class="main__discription discription">
+            <article class="discription__info info">
+                <div class="info__text text">
+                    <div class="text__about-employee about-employee">
+                        <div class="about-employee__employee employee">
+                            <div class="employee__greeting">
+                                <h2>Hi I am</h2>
+                                <h3>Mahmood Fazile</h3>
+                            </div>
+                            <p>UI/UX designer</p>
+                        </div>
+                        <div class="about-employee__media">
+                            <img src="./styles/blocks/main/icons/Frame 52.svg">
+                            <img src="./styles/blocks/main/icons/Frame 53.svg">
+                            <img src="./styles/blocks/main/icons/Frame 54.svg">
+                            <img src="./styles/blocks/main/icons/Frame 55.svg">
+                        </div>
+                    </div>
+                    <div class="text__btn-cont btn-cont">
+                        <button>Hire me</button>
+                        <button>Download CV</button>
+                    </div>
+                </div>
+                <div class="info__stats stats">
+                    <div class="stats__text-cont">
+                        <h2>5+</h2>
+                        <p>Experiences</p>
+                    </div>
+                    <div class="stats__text-cont">
+                        <h2>20+</h2>
+                        <p>Project done</p>
+                    </div>
+                    <div class="stats__text-cont--none">
+                        <h2>80+</h2>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+            </article>
+            <article class="discription__image">
+                <img src="./styles/blocks/main/image/Photo.svg">
+            </article>
+        </section>
+    </main>
 </body>
 </html>

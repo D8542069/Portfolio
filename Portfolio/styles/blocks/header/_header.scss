@@ -1,15 +1,9 @@
 .header {
     width: 100%;
-    @include flex-list;
+    @include flex-center;
+    padding: 57px 80px 0 80px;
+    gap: 203px;
 
-    &__nav {
-        width: 100%;
-        @include flex-space-around;
-        margin: 57px;
-    }
-}
-
-.nav {
     &__logo {
         background-image: var(--gradient-logo);
         background-clip: text;
@@ -17,9 +11,8 @@
         font-size: var(--heading-size-logo);
     }
 
-    &__list {
-        @include flex-center;
-        gap: 60px;
+    &__nav {
+        @include flex-space-around;
     }
 
     &__btn-cont > button {
@@ -30,6 +23,14 @@
         background: var(--button-bg-color);
         color: var(--text-white);
         box-shadow: 0 0 1000px 5px orange;
+    }
+}
+
+.nav {
+
+    &__list {
+        @include flex-center;
+        gap: 60px;
     }
 }
 

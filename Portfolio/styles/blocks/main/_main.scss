@@ -1,0 +1,151 @@
+.main {
+    &__discription {
+        padding-top: 30px;
+        @include flex-center;
+        gap: 128px;
+    } 
+}
+
+.discription {
+    &__info {
+        @include flex-list;
+        gap: 80px;
+    }
+}
+
+.info {
+    &__text {
+        @include flex-list;
+        gap: 61px;
+    }
+
+    &__stats {
+        border-radius: var(--button-radius);
+        padding: 24px 24px 24px 24px;
+        @include flex-center;
+        gap: 30px;
+        background-color: var(--background-darker);
+    }
+}
+
+.text {
+    &__about-employee {
+        @include flex-list;
+        gap: 17px;
+    }
+
+    &__btn-cont {
+        @include flex;
+        gap: 24px;
+    }
+}
+
+.btn-cont > button:nth-child(1) {
+    @include flex-center;
+    border-radius: var(--button-radius);
+    padding: 12px 40px 12px 40px;
+    width: 156px;
+    height: 48px;
+    background: var(--button-bg-color);
+    color: var(--text-white);
+    font-size: var(--text-size-normal);
+}
+
+.btn-cont > button:nth-child(2) {
+    @include flex-center;
+    border: 2px solid var(--text-grey-hover);
+    border-radius: var(--button-radius);
+    padding: 12px 40px 12px 40px;
+    width: 209px;
+    height: 48px;
+    color: var(--text-grey-hover);
+    font-size: var(--text-size-normal);
+}
+
+.about-employee {
+    &__employee {
+        @include flex-list;
+        gap: 24px;
+    }
+
+    &__employee > p {
+        font-size: var(--heading-size-big);
+        background: var(--heading-orange);
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0px 0px 1000px rgb(148, 96, 0);
+    }
+
+    &__media {
+        padding-top: 16px; 
+        @include flex;
+        gap: 20px;
+    }
+}
+
+.employee {
+    &__greeting {
+        @include flex-list;
+        gap: 10px;
+    }
+
+    &__greeting > h2 {
+        font-size: var(--heading-size-small);
+        color: var(--text-grey-active);
+    }
+
+    &__greeting > h3 {
+        font-size: var(--heading-size-normal);
+        color: var(--text-grey-active);
+    }
+
+    &__greeting > h2:hover {
+        font-size: var(--heading-size-small);
+        color: var(--text-grey-hover);
+    }
+
+    &__greeting > h3:hover {
+        font-size: var(--heading-size-normal);
+        color: var(--text-grey-hover);
+    }
+}
+
+.stats {
+
+    &__text-cont {
+        padding-right: 30px;
+        border-right: solid 1px var(--text-white);
+    }
+
+    &__text-cont > h2 {
+        font-size: var(--heading-size-small);
+        color: var(--text-hover-orange);
+    }
+
+    &__text-cont > p {
+        font-size: var(--text-size-normal);
+        color: var(--text-white-active)
+    }
+
+    &__text-cont > p:hover {
+        color: var(--text-white-hover)
+    }
+
+    &__text-cont--none {
+        padding-right: 30px;
+    }
+
+    &__text-cont--none > h2 {
+        font-size: var(--heading-size-small);
+        color: var(--text-hover-orange);
+    }
+
+     &__text-cont--none > p {
+        font-size: var(--text-size-normal);
+        color: var(--text-white-active)
+    }
+
+    &__text-cont--none > p:hover {
+        color: var(--text-white-hover)
+    }
+}

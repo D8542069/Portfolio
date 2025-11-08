@@ -2,7 +2,10 @@
 'normalize',
 'mixins',
 'variables',
-'global';
+'global',
+'fonts';
 
 @import
-'./blocks/header/header';
+'./blocks/header/header',
+'./blocks/main/main',
+'./blocks/footer/footer';
