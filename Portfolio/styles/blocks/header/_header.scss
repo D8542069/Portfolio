@@ -1,0 +1,51 @@
+.header {
+    width: 100%;
+    @include flex-list;
+
+    &__nav {
+        width: 100%;
+        @include flex-space-around;
+        margin: 57px;
+    }
+}
+
+.nav {
+    &__logo {
+        background-image: var(--gradient-logo);
+        background-clip: text;
+        color: transparent;
+        font-size: var(--heading-size-logo);
+    }
+
+    &__list {
+        @include flex-center;
+        gap: 60px;
+    }
+
+    &__btn-cont > button {
+        border-radius: var(--button-radius);
+        padding: 12px 40px;
+        width: 141px;
+        height: 43px;
+        background: var(--button-bg-color);
+        color: var(--text-white);
+        box-shadow: 0 0 1000px 5px orange;
+    }
+}
+
+.list {
+    &__element {
+        font-size: var(--text-size-normal);
+        
+    }
+
+    &__element > a {
+        color: var(--text-dark);
+        transition: 2s;
+    }
+
+    &__element > a:hover {
+        color: var(--text-hover-orange);
+    }
+}
+
