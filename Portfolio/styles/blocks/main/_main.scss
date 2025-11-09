@@ -49,6 +49,7 @@
     background: var(--button-bg-color);
     color: var(--text-white);
     font-size: var(--text-size-normal);
+    font-weight: var(--font-weight-700);
 }
 
 .btn-cont > button:nth-child(2) {
@@ -60,6 +61,7 @@
     height: 48px;
     color: var(--text-grey-hover);
     font-size: var(--text-size-normal);
+    font-weight: var(--font-weight-700);
 }
 
 .about-employee {
@@ -74,6 +76,7 @@
         background-clip: text;
         color: transparent;
         text-shadow: 0px 0px 1000px rgb(148, 96, 0);
+        font-weight: var(--font-weight-900);
     }
 
     &__media {
@@ -92,11 +95,13 @@
     &__greeting > h2 {
         font-size: var(--heading-size-small);
         color: var(--text-grey-active);
+        font-weight: var(--font-weight-600);
     }
 
     &__greeting > h3 {
         font-size: var(--heading-size-normal);
         color: var(--text-grey-active);
+        font-weight: var(--font-weight-700);
     }
 
     &__greeting > h2:hover {
@@ -113,22 +118,26 @@
 .stats {
 
     &__text-cont {
+        @include flex-list;
         padding-right: 30px;
         border-right: solid 1px var(--text-white);
+        gap: 12px;
     }
 
     &__text-cont > h2 {
         font-size: var(--heading-size-small);
         color: var(--text-hover-orange);
+        font-weight: var(--font-weight-800);
     }
 
     &__text-cont > p {
         font-size: var(--text-size-normal);
-        color: var(--text-white-active)
+        color: var(--text-white-active);
+        font-weight: var(--font-weight-700);
     }
 
     &__text-cont > p:hover {
-        color: var(--text-white-hover)
+        color: var(--text-white-hover);
     }
 
     &__text-cont--none {
@@ -138,14 +147,16 @@
     &__text-cont--none > h2 {
         font-size: var(--heading-size-small);
         color: var(--text-hover-orange);
+        font-weight: var(--font-weight-800);
     }
 
      &__text-cont--none > p {
         font-size: var(--text-size-normal);
-        color: var(--text-white-active)
+        color: var(--text-white-active);
+        font-weight: var(--font-weight-700);
     }
 
     &__text-cont--none > p:hover {
-        color: var(--text-white-hover)
+        color: var(--text-white-hover);
     }
 }

@@ -127,6 +127,12 @@ label {
   --background-darker: rgba(255, 255, 255, 0.04);
   --text-grey-active: #707070;
   --text-grey-hover: #959595;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+  --font-weight-900: 900;
+  --second-family: "K2D", sans-serif;
 }
 
 body {
@@ -134,7 +140,7 @@ body {
 }
 
 body > * {
-  font-family: K2D;
+  font-family: Lato;
 }
 
 body > h1, h2, h3, h4, h5, h6, p, span {
@@ -257,6 +263,8 @@ body > h1, h2, h3, h4, h5, h6, p, span {
           background-clip: text;
   color: transparent;
   font-size: var(--heading-size-logo);
+  font-family: var(--second-family);
+  font-weight: var(--font-weight-700);
 }
 .header__nav {
   display: -webkit-box;
@@ -275,8 +283,7 @@ body > h1, h2, h3, h4, h5, h6, p, span {
   height: 43px;
   background: var(--button-bg-color);
   color: var(--text-white);
-  -webkit-box-shadow: 0 0 1000px 5px orange;
-          box-shadow: 0 0 1000px 5px orange;
+  font-weight: var(--font-weight-700);
 }
 
 .nav__list {
@@ -294,6 +301,7 @@ body > h1, h2, h3, h4, h5, h6, p, span {
 
 .list__element {
   font-size: var(--text-size-normal);
+  font-weight: var(--font-weight-700);
 }
 .list__element > a {
   color: var(--text-dark);
@@ -389,6 +397,7 @@ body > h1, h2, h3, h4, h5, h6, p, span {
   background: var(--button-bg-color);
   color: var(--text-white);
   font-size: var(--text-size-normal);
+  font-weight: var(--font-weight-700);
 }
 
 .btn-cont > button:nth-child(2) {
@@ -408,6 +417,7 @@ body > h1, h2, h3, h4, h5, h6, p, span {
   height: 48px;
   color: var(--text-grey-hover);
   font-size: var(--text-size-normal);
+  font-weight: var(--font-weight-700);
 }
 
 .about-employee__employee {
@@ -427,6 +437,7 @@ body > h1, h2, h3, h4, h5, h6, p, span {
           background-clip: text;
   color: transparent;
   text-shadow: 0px 0px 1000px rgb(148, 96, 0);
+  font-weight: var(--font-weight-900);
 }
 .about-employee__media {
   padding-top: 16px;
@@ -449,10 +460,12 @@ body > h1, h2, h3, h4, h5, h6, p, span {
 .employee__greeting > h2 {
   font-size: var(--heading-size-small);
   color: var(--text-grey-active);
+  font-weight: var(--font-weight-600);
 }
 .employee__greeting > h3 {
   font-size: var(--heading-size-normal);
   color: var(--text-grey-active);
+  font-weight: var(--font-weight-700);
 }
 .employee__greeting > h2:hover {
   font-size: var(--heading-size-small);
@@ -464,16 +477,26 @@ body > h1, h2, h3, h4, h5, h6, p, span {
 }
 
 .stats__text-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-right: 30px;
   border-right: solid 1px var(--text-white);
+  gap: 12px;
 }
 .stats__text-cont > h2 {
   font-size: var(--heading-size-small);
   color: var(--text-hover-orange);
+  font-weight: var(--font-weight-800);
 }
 .stats__text-cont > p {
   font-size: var(--text-size-normal);
   color: var(--text-white-active);
+  font-weight: var(--font-weight-700);
 }
 .stats__text-cont > p:hover {
   color: var(--text-white-hover);
@@ -484,10 +507,12 @@ body > h1, h2, h3, h4, h5, h6, p, span {
 .stats__text-cont--none > h2 {
   font-size: var(--heading-size-small);
   color: var(--text-hover-orange);
+  font-weight: var(--font-weight-800);
 }
 .stats__text-cont--none > p {
   font-size: var(--text-size-normal);
   color: var(--text-white-active);
+  font-weight: var(--font-weight-700);
 }
 .stats__text-cont--none > p:hover {
   color: var(--text-white-hover);

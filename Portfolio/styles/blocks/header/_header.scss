@@ -9,6 +9,8 @@
         background-clip: text;
         color: transparent;
         font-size: var(--heading-size-logo);
+        font-family: var(--second-family);
+        font-weight: var(--font-weight-700);
     }
 
     &__nav {
@@ -22,7 +24,7 @@
         height: 43px;
         background: var(--button-bg-color);
         color: var(--text-white);
-        box-shadow: 0 0 1000px 5px orange;
+        font-weight: var(--font-weight-700);
     }
 }
 
@@ -37,7 +39,7 @@
 .list {
     &__element {
         font-size: var(--text-size-normal);
-        
+        font-weight: var(--font-weight-700);
     }
 
     &__element > a {
@@ -48,5 +50,6 @@
     &__element > a:hover {
         color: var(--text-hover-orange);
     }
+
 }
 
