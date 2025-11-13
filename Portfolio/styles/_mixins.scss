@@ -49,3 +49,12 @@
     justify-content: space-around;
     align-items: center;
 }
+
+@mixin grid {
+    display: grid;
+}
+
+@mixin grid-center {
+    display: grid;
+    justify-content: center;
+}

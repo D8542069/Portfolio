@@ -120,6 +120,7 @@ label {
   --heading-size-normal: 28px;
   --heading-size-big: 70px;
   --button-radius: 8px;
+  --container-radius: 24px;
   --button-bg-color: linear-gradient(129deg, #fd6f00 0%, #e46400 100%);
   --body-color: #121212;
   --text-white-active: #C6C6C6;
@@ -133,6 +134,10 @@ label {
   --font-weight-800: 800;
   --font-weight-900: 900;
   --second-family: "K2D", sans-serif;
+  --foundation--white-light: #FEFEFE;
+  --foundation-white-darker: #575757;
+  --foundation-orange-normal: #FD6F00;
+  --font-size-40px: 40px;
 }
 
 body {
@@ -312,7 +317,22 @@ body > h1, h2, h3, h4, h5, h6, p, span {
   color: var(--text-hover-orange);
 }
 
+.main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 150px;
+}
 .main__discription {
+  width: 100%;
   padding-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -324,6 +344,30 @@ body > h1, h2, h3, h4, h5, h6, p, span {
       -ms-flex-align: center;
           align-items: center;
   gap: 128px;
+}
+.main__services {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 80px;
+}
+.main__services-cards {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, 400px);
 }
 
 .discription__info {
@@ -502,7 +546,15 @@ body > h1, h2, h3, h4, h5, h6, p, span {
   color: var(--text-white-hover);
 }
 .stats__text-cont--none {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-right: 30px;
+  gap: 12px;
 }
 .stats__text-cont--none > h2 {
   font-size: var(--heading-size-small);
@@ -516,4 +568,71 @@ body > h1, h2, h3, h4, h5, h6, p, span {
 }
 .stats__text-cont--none > p:hover {
   color: var(--text-white-hover);
+}
+
+.services__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 18px;
+}
+.services__text > h2 {
+  color: var(--foundation--white-light);
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-size-40px);
+}
+.services__text > p {
+  color: var(--text-grey-active);
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-size-normal);
+}
+
+.services-cards__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 34px;
+  background-color: var(--background-darker);
+  padding: 34px;
+  border-radius: var(--container-radius);
+}
+
+.card__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+.card__icon > h2 {
+  color: var(--foundation-orange-normal);
+  font-weight: var(--font-weight-700);
+  font-size: var(--heading-size-small);
+}
+.card__text > p {
+  color: var(--foundation-white-darker);
+  font-weight: var(--font-weight-500);
+  font-size: var(--text-size-normal);
+  text-align: center;
+  line-height: 160%;
 }

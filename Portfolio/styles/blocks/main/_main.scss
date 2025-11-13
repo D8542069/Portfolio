@@ -1,9 +1,28 @@
 .main {
+    width: 100%;
+    @include flex-list-center;
+    row-gap: 150px;
+
     &__discription {
+        width: 100%;
         padding-top: 30px;
         @include flex-center;
         gap: 128px;
-    } 
+    }
+
+    &__services {
+        width: 100%;
+        @include flex-list-center;
+        gap: 80px;
+    }
+
+    &__services-cards {
+        width: 100%;
+        @include grid-center;
+        
+        gap: 40px;
+        grid-template-columns: repeat(auto-fit, 400px);
+    }
 }
 
 .discription {
@@ -141,7 +160,9 @@
     }
 
     &__text-cont--none {
+        @include flex-list;
         padding-right: 30px;
+        gap: 12px;
     }
 
     &__text-cont--none > h2 {
@@ -158,5 +179,55 @@
 
     &__text-cont--none > p:hover {
         color: var(--text-white-hover);
+    }
+}
+
+.services {
+    &__text {
+        @include flex-list-center;
+        gap: 18px;
+    }
+
+    &__text > h2 {
+        color: var(--foundation--white-light);
+        font-weight: var(--font-weight-700);
+        font-size: var(--font-size-40px);
+    }
+
+    &__text > p {
+        color: var(--text-grey-active);
+        font-weight: var(--font-weight-500);
+        font-size: var(--font-size-normal);
+    }
+}
+
+.services-cards {
+    &__card {
+        @include flex-list-center;
+        gap: 34px;
+        background-color: var(--background-darker);
+        padding: 34px;
+        border-radius: var(--container-radius);
+    }
+}
+
+.card {
+    &__icon {
+        @include flex-list-center;
+        gap: 16px;
+    }
+
+    &__icon > h2 {
+        color: var(--foundation-orange-normal);
+        font-weight: var(--font-weight-700);
+        font-size: var(--heading-size-small);
+    }
+
+    &__text > p {
+        color: var(--foundation-white-darker);
+        font-weight: var(--font-weight-500);
+        font-size: var(--text-size-normal);
+        text-align: center;
+        line-height: 160%;
     }
 }
