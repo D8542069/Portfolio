@@ -8,6 +8,11 @@
     align-items: center;
 }
 
+@mixin flex-end {
+    display: flex;
+    align-items: flex-end;
+}
+
 @mixin flex-center-wrap {
     display: flex;
     justify-content: center;
@@ -18,6 +23,12 @@
 @mixin flex-list {
     display: flex;
     flex-direction: column;
+}
+
+@mixin flex-list-start {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 @mixin flex-list-center {
@@ -57,4 +68,5 @@
 @mixin grid-center {
     display: grid;
     justify-content: center;
+    align-items: center;
 }

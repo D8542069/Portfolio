@@ -19,9 +19,25 @@
     &__services-cards {
         width: 100%;
         @include grid-center;
-        
         gap: 40px;
         grid-template-columns: repeat(auto-fit, 400px);
+    }
+
+    &__about-me {
+        width: calc(1298/1440)*100%;
+        @include flex-list-center;
+        gap: 40px;
+    }
+
+    &__portfolio {
+        @include flex-list-center;
+        gap: 70px;
+    }
+
+    &__connection {
+        width: calc(1012/1440)*100%;
+        @include flex-list-center;
+        gap: 50px;
     }
 }
 
@@ -229,5 +245,206 @@
         font-size: var(--text-size-normal);
         text-align: center;
         line-height: 160%;
+    }
+}
+
+.about-me {
+    &__small-text {
+        @include flex-list-center;
+        align-items: center;
+        gap: 18px;
+    }
+
+    &__small-text > h2 {
+        font-size: var(--font-size-40px);
+        font-weight: var(--font-weight-700);
+        color: var(--foundation--white-light);
+        letter-spacing: 0.03em;
+        text-align: justify;
+    }
+
+    &__small-text > p {
+        font-weight: var(--font-weight-500);
+        line-height: 160%;
+        letter-spacing: 0.03em;
+        text-transform: capitalize;
+        text-align: justify;
+        color: var(--text-grey-active);
+    }
+
+    &__big-text {
+        @include flex-center;
+        gap: 101px;
+    }
+
+    &__skills {
+        @include flex-center;
+        gap: 74px;
+        margin-top: 60px;
+    }
+}
+
+.big-text {
+    &__main-text {
+        @include flex-list-start;
+        gap: 40px;
+    }
+
+    &__main-text > p {
+        font-family: var(--font-family);
+        font-weight: var(--font-weight-500);
+        font-size: var(--text-size-normal);
+        line-height: 190%;
+        text-align: justify;
+        color: var(--text-grey-active);
+    }
+
+    &__main-text > button {
+        @include flex-center;
+        gap: 10px;
+        padding: 12px 30px 12px 30px;
+        width: 224px;
+        height: 48px;
+        font-weight: var(--font-weight-700);
+        font-size: var(--text-size-normal);
+        color: var(--text-white);
+        border-radius: var(--button-radius);
+        background: var(--button-bg-color);
+    }
+}
+
+.skills {
+    &__the-scale {
+        width: 200px;
+        @include flex-list-center;
+        text-align: center;
+        gap: 24px;
+    }
+}
+
+.the-scale {
+    &__programm-name {
+        @include flex-list-center;
+        gap: 8px;
+    }
+
+    &__programm-name > h2 {
+        background: var(--gradient-percentage);
+        background-clip: text;
+        color: transparent;
+        font-size: var(--heading-size-normal);
+        font-weight: var(--font-weight-700);
+    }
+
+    &__programm-name > p {
+        color: var(--text-dark);
+        font-size: var(--heading-size-small);
+        font-weight: var(--font-weight-700);
+    }
+}
+
+.portfolio {
+    &__portfolio-btns {
+        @include flex-list-center;
+        gap: 40px;
+    }
+
+    &__portfolio-btns > h2 {
+        color: var(--foundation-white-light);
+        font-weight: var(--font-weight-700);
+        font-size: var(--font-size-40px);
+    }
+
+    &__examples {
+        width: 100%;
+        @include grid;
+        padding: 0 80px;
+        column-gap: 17px;
+        row-gap: 24px;
+        grid-template-columns: repeat(3, 415px);
+    }
+}
+
+.portfolio-btns {
+    &__buttons {
+        @include flex-center;
+        gap: 24px;
+    }
+
+    &__buttons > :nth-last-child(-n + 4) {
+        height: 54px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: var(--button-radius);
+        padding: 14px 40px;
+        font-weight: var(--font-weight-700);
+        font-size: var(-text-size-small);
+        color: var(--text-white-active);
+    }
+
+    &__buttons > :nth-child(1) {
+        background: var(--button-bg-color);
+        border-radius: var(--button-radius);
+        padding: 14px 40px;
+        font-weight: var(--font-weight-700);
+        font-size: var(-text-size-small);
+        color: var(--text-white);
+    }
+}
+
+.examples {
+    &__project-card > div {
+        @include flex;
+        border-radius: 0 0 16px 16px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 16px;
+        justify-content: space-between;
+        color: var();
+    }
+}
+
+.project-card {
+    &__name-project > h2 {
+        color: var(--text-white-active);
+    }
+
+    &__name-project > p {
+        color: var(--text-grey-hover);
+    }
+}
+
+.connection {
+    &__contact-me {
+        @include flex-list-center;
+        gap: 18px;
+    }
+
+    &__contact-me > h2 {
+        color: var(--foundation-white-light);
+        font-weight: var(--font-weight-700);
+        font-size: var(--font-size-40px);
+    }
+
+    &__contact-me > p {
+        color: var(--text-grey-active);
+        font-weight: var(--font-weight-500);
+        font-size: var(--text-size-normal);
+    }
+
+    &__contact-with-me {
+        @include flex-list-center;
+        gap: 30px;
+    }
+
+    &__contact-with-me p {
+        @include flex;
+        border-radius: var(--button-radius);
+        background: rgba(255, 255, 255, 0.04);
+        padding: 14px 24px;
+        gap: 30px;
+    }
+
+    &__contact-with-me > button {
+        @include flex-end;
+        
     }
 }
