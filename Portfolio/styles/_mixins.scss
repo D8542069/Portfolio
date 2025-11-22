@@ -32,6 +32,14 @@
     flex-direction: column;
 }
 
+@mixin flex-list-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 @mixin flex-list-start {
     display: flex;
     flex-direction: column;

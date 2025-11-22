@@ -1,3 +1,82 @@
 .footer {
+    @include flex-list-center;
+    margin-top: 150px;
+    padding: 40px 80px 24px;
+    background: rgba(255, 255, 255, 0.04);
+    row-gap: 50px;
+    &__footer-nav {
+        @include flex-list-center;
+        row-gap: 50px;
+    }
     
+    &__footer-links {
+        @include flex-list-wrap;
+        row-gap: 50px;
+    }
+
+    &__designed-by {
+        border-top: 1px solid var(--text-dark) ;
+        color: var(--text-grey-hover);
+        padding: 16px 120px 0px;
+        font-weight: var(--font-weight-700);
+        font-size: var(--text-size-small);
+    }
 }
+
+.footer-nav {
+    &__footer-list {
+        @include flex-center-wrap;
+        column-gap: 60px;
+        row-gap: 40px;
+    }
+    h2 {
+        background-image: var(--gradient-logo);
+        background-clip: text;
+        color: transparent;
+        font-size: var(--heading-size-logo);
+        font-family: var(--second-family);
+        font-weight: var(--font-weight-700);
+    }
+}
+
+.footer-list {
+    &__footer-list-element {
+        font-size: var(--text-size-normal);
+        font-weight: var(--font-weight-700);
+    }
+
+    &__footer-list-element > a {
+        color: var(--text-dark);
+        transition: 2s;
+    }
+
+    &__footer-list-element > a:hover {
+        color: var(--text-hover-orange);
+    }
+}
+
+.footer-links {
+    &__footer-links-icons {
+        @include flex;
+        column-gap: 20px;
+    }
+
+    &__contact-info {
+        @include flex-center-wrap;
+        column-gap: 40px;
+    }
+    
+    &__contact-info > p {
+        @include flex-center-wrap;
+        column-gap: 14px;
+        color: var(--text-dark);
+        font-weight: var(--font-weight-700);
+        font-size: var(--text-size-normal);
+    }
+}
+
+
+
+
+
+    

@@ -455,19 +455,43 @@
         font-size: var(--text-size-normal);
         color: var(--text-grey-hover);
     }
+
+    &__form {
+        @include flex-list;
+        gap: 30px;
+    }
 }
 
 .form {
-    @include flex-list;
-    gap: 30px;
     p {
         @include flex-center-wrap;
         gap: 30px;
+        align-items: start;
         input {
+            width: 491px;
+            height: 54px;
             border-radius: 8px;
             padding: 12px 24px;
             background: rgba(255, 255, 255, 0.04);
             color: var(--text-grey-hover);
         }
     }
+
+
+    &__none-same-forms > input:nth-last-child(1) {
+        height: 162px;
+    }
+
+    div {
+        @include flex-end;
+        button {
+            padding: 12px 40px;
+            border: 2px solid var(--text-grey-hover);
+            border-radius: var(--button-radius);
+            color: var(--text-grey-hover);
+            font-weight: var(--font-weight-700);
+            font-size: var(--text-size-normal);
+        }
+    }
 }
+
