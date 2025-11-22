@@ -1,8 +1,11 @@
 .header {
-    width: calc(1440/1440*100%);
-    @include flex-center;
-    padding: 57px 80px 0 80px;
-    gap: 203px;
+    width: 100%;
+    padding: 57px 120px 0 80px; // Паддинг не правильный был из-за чего лого не так стоял как в дизайне
+    @include flex-center-wrap; //не забывай стаивть wrap!
+        //gap: 203px; не используйпросто gap используй column-gap для отступа по ширине и row-gap для остутпа по высоте
+    column-gap: 203px;
+    row-gap:40px;
+
 
     &__logo {
         background-image: var(--gradient-logo);
@@ -14,7 +17,8 @@
     }
 
     &__nav {
-        @include flex-space-around;
+        @include flex-center; // центрировать не забывай 
+
     }
 
     &__btn-cont > button {
@@ -31,7 +35,7 @@
 .nav {
 
     &__list {
-        @include flex-center;
+        @include flex-center-wrap; //не забывай стаивть wrap!
         gap: 60px;
     }
 }
