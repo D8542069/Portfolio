@@ -629,7 +629,7 @@ body > h1, h2, h3, h4, h5, h6, p, span {
   gap: 18px;
 }
 .services__text > h2 {
-  color: var(--foundation--white-light);
+  color: var(--foundation-white-light);
   font-weight: var(--font-weight-700);
   font-size: var(--font-size-40px);
 }
@@ -699,7 +699,7 @@ body > h1, h2, h3, h4, h5, h6, p, span {
 .about-me__small-text > h2 {
   font-size: var(--font-size-40px);
   font-weight: var(--font-weight-700);
-  color: var(--foundation--white-light);
+  color: var(--foundation-white-light);
   letter-spacing: 0.03em;
   text-align: justify;
 }
@@ -934,25 +934,47 @@ body > h1, h2, h3, h4, h5, h6, p, span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 30px;
 }
-.connection__contact-with-me p {
+.connection__contact-with-me > div {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.connection__contact-with-me > div > button {
+  border: 2px solid var(--text-grey-hover);
+  border-radius: var(--button-radius);
+  padding: 12px 40px;
+  font-weight: var(--font-weight-700);
+  font-size: var(--text-size-normal);
+  color: var(--text-grey-hover);
+}
+
+.contact-with-me__same-forms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
   border-radius: var(--button-radius);
   background: rgba(255, 255, 255, 0.04);
   padding: 14px 24px;
-  gap: 30px;
+  font-weight: var(--font-weight-500);
+  font-size: var(--text-size-small);
+  color: var(--text-grey-hover);
 }
-.connection__contact-with-me > button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+.contact-with-me__none-same-forms {
+  height: 162px;
+  border-radius: var(--button-radius);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 14px 24px;
+  font-weight: var(--font-weight-500);
+  font-size: var(--text-size-small);
+  color: var(--text-grey-hover);
+}
+.contact-with-me__none-same-forms > :nth-child(1) {
+  height: 54px;
 }

@@ -205,7 +205,7 @@
     }
 
     &__text > h2 {
-        color: var(--foundation--white-light);
+        color: var(--foundation-white-light);
         font-weight: var(--font-weight-700);
         font-size: var(--font-size-40px);
     }
@@ -258,7 +258,7 @@
     &__small-text > h2 {
         font-size: var(--font-size-40px);
         font-weight: var(--font-weight-700);
-        color: var(--foundation--white-light);
+        color: var(--foundation-white-light);
         letter-spacing: 0.03em;
         text-align: justify;
     }
@@ -431,20 +431,48 @@
     }
 
     &__contact-with-me {
-        @include flex-list-center;
+        @include flex-list;
         gap: 30px;
     }
 
-    &__contact-with-me p {
+    &__contact-with-me > div {
+        width: 100%;
+        @include flex-end;
+    }
+
+    &__contact-with-me > div > button {
+        border: 2px solid var(--text-grey-hover);
+        border-radius: var(--button-radius);
+        padding: 12px 40px;
+        font-weight: var(--font-weight-700);
+        font-size: var(--text-size-normal);
+        color: var(--text-grey-hover);
+    }
+}
+
+.contact-with-me {
+    &__same-forms {
         @include flex;
+        gap: 30px;
         border-radius: var(--button-radius);
         background: rgba(255, 255, 255, 0.04);
         padding: 14px 24px;
-        gap: 30px;
+        font-weight: var(--font-weight-500);
+        font-size: var(--text-size-small);
+        color: var(--text-grey-hover);
     }
 
-    &__contact-with-me > button {
-        @include flex-end;
-        
+    &__none-same-forms {
+        height: 162px;
+        border-radius: var(--button-radius);
+        background: rgba(255, 255, 255, 0.04);
+        padding: 14px 24px;
+        font-weight: var(--font-weight-500);
+        font-size: var(--text-size-small);
+        color: var(--text-grey-hover);
+    }
+
+    &__none-same-forms > :nth-child(1) {
+        height: 54px;
     }
 }

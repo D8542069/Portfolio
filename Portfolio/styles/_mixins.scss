@@ -10,7 +10,7 @@
 
 @mixin flex-end {
     display: flex;
-    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 @mixin flex-center-wrap {
