@@ -30,7 +30,8 @@
     }
 
     &__portfolio {
-        width: 100%; // ширину не забывай ставить
+
+        width: 100%;
         @include flex-list-center;
         gap: 70px;
     }
@@ -46,6 +47,12 @@
     &__info {
         @include flex-list;
         gap: 80px;
+    }
+
+    &__image {
+        img {
+            filter: grayscale(80%);
+        }
     }
 }
 
@@ -358,11 +365,11 @@
 
     &__examples {
         width: 100%;
-        @include grid-center; //grid center!
+        @include grid-center;
         padding: 0 80px;
         column-gap: 17.5px;
         row-gap: 24px;
-        grid-template-columns: repeat(auto-fit, 400px); // ставь auto-fit чтобы карточки занимали всю ширину контейнера и смещались сами при уменьшении экрана
+        grid-template-columns: repeat(auto-fit, 415px);
     }
 }
 
@@ -457,9 +464,23 @@
         background: rgba(255, 255, 255, 0.04);
     }
 
-button {
+    button {
         @include flex-end;
     }
 
 }
-//
+
+.form {
+    @include flex-list;
+    gap: 30px;
+    p {
+        @include flex-center-wrap;
+        gap: 30px;
+        input {
+            border-radius: 8px;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-grey-hover);
+        }
+    }
+}

@@ -1,4 +1,5 @@
 .header {
+<<<<<<< HEAD
     width: 100%;
     padding: 57px 120px 0 80px; // Паддинг не правильный был из-за чего лого не так стоял как в дизайне
     @include flex-center-wrap; //не забывай стаивть wrap!
@@ -6,6 +7,13 @@
     column-gap: 203px;
     row-gap:40px;
 
+=======
+    width: calc(1440/1440*100%);
+    @include flex-center-wrap;
+    padding: 57px 120px 0 80px;
+    column-gap: 203px;
+    row-gap: 40px;
+>>>>>>> 57303363c061854a2c18a5c5a529d1e76ffb8883
 
     &__logo {
         background-image: var(--gradient-logo);
@@ -16,11 +24,14 @@
         font-weight: var(--font-weight-700);
     }
 
+<<<<<<< HEAD
     &__nav {
         @include flex-center; // центрировать не забывай 
 
     }
 
+=======
+>>>>>>> 57303363c061854a2c18a5c5a529d1e76ffb8883
     &__btn-cont > button {
         border-radius: var(--button-radius);
         padding: 12px 40px;
@@ -35,8 +46,14 @@
 .nav {
 
     &__list {
+<<<<<<< HEAD
         @include flex-center-wrap; //не забывай стаивть wrap!
         gap: 60px;
+=======
+        @include flex-center-wrap;
+        column-gap: 60px;
+        row-gap: 40px;
+>>>>>>> 57303363c061854a2c18a5c5a529d1e76ffb8883
     }
 }
 
