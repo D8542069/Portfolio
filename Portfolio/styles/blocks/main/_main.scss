@@ -6,7 +6,7 @@
     &__discription {
         width: 100%;
         padding-top: 30px;
-        @include flex-center;
+        @include flex-center-wrap-reverse;
         gap: 128px;
     }
 
@@ -30,6 +30,7 @@
     }
 
     &__portfolio {
+        width: 100%; // ширину не забывай ставить
         @include flex-list-center;
         gap: 70px;
     }
@@ -273,12 +274,12 @@
     }
 
     &__big-text {
-        @include flex-center;
+        @include flex-center-wrap;
         gap: 101px;
     }
 
     &__skills {
-        @include flex-center;
+        @include flex-center-wrap;
         gap: 74px;
         margin-top: 60px;
     }
@@ -357,17 +358,17 @@
 
     &__examples {
         width: 100%;
-        @include grid;
+        @include grid-center; //grid center!
         padding: 0 80px;
-        column-gap: 17px;
+        column-gap: 17.5px;
         row-gap: 24px;
-        grid-template-columns: repeat(3, 415px);
+        grid-template-columns: repeat(auto-fit, 400px); // ставь auto-fit чтобы карточки занимали всю ширину контейнера и смещались сами при уменьшении экрана
     }
 }
 
 .portfolio-btns {
     &__buttons {
-        @include flex-center;
+        @include flex-center-wrap;
         gap: 24px;
     }
 
@@ -430,21 +431,35 @@
         font-size: var(--text-size-normal);
     }
 
-    &__contact-with-me {
+
+}
+
+// я перенес форму так как ты из-за не закрытого секшина всё перепутал
+.form{
+
         @include flex-list-center;
         gap: 30px;
-    }
 
-    &__contact-with-me p {
-        @include flex;
-        border-radius: var(--button-radius);
-        background: rgba(255, 255, 255, 0.04);
+        
+
+    p {
+        @include flex-center-wrap; // center-wrap не забывай про врапы, они нужны там где элементы обязательно должны смещаться
         padding: 14px 24px;
         gap: 30px;
+    } // стили для инпута пишутся на инпутах а не на их контейнера
+
+    p>input{
+        width: 391px; //высоту и ширину я поставил
+        height: 54px; //высоту и ширину я поставил
+        padding: 10px; // нужен чтобы плейсхолдер и текст отсутпились
+        color: white; // нужен чтобы менялся цвет у текста который ты ввел в инпут
+        border-radius: var(--button-radius);
+        background: rgba(255, 255, 255, 0.04);
     }
 
-    &__contact-with-me > button {
+button {
         @include flex-end;
         
     }
+
 }
