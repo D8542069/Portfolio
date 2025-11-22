@@ -1,8 +1,9 @@
 .header {
     width: calc(1440/1440*100%);
-    @include flex-center;
-    padding: 57px 80px 0 80px;
-    gap: 203px;
+    @include flex-center-wrap;
+    padding: 57px 120px 0 80px;
+    column-gap: 203px;
+    row-gap: 40px;
 
     &__logo {
         background-image: var(--gradient-logo);
@@ -11,10 +12,6 @@
         font-size: var(--heading-size-logo);
         font-family: var(--second-family);
         font-weight: var(--font-weight-700);
-    }
-
-    &__nav {
-        @include flex-space-around;
     }
 
     &__btn-cont > button {
@@ -31,8 +28,9 @@
 .nav {
 
     &__list {
-        @include flex-center;
-        gap: 60px;
+        @include flex-center-wrap;
+        column-gap: 60px;
+        row-gap: 40px;
     }
 }
 

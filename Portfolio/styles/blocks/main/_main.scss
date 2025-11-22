@@ -6,7 +6,7 @@
     &__discription {
         width: 100%;
         padding-top: 30px;
-        @include flex-center;
+        @include flex-center-wrap-reverse;
         gap: 128px;
     }
 
@@ -30,6 +30,7 @@
     }
 
     &__portfolio {
+        width: 100%;
         @include flex-list-center;
         gap: 70px;
     }
@@ -45,6 +46,12 @@
     &__info {
         @include flex-list;
         gap: 80px;
+    }
+
+    &__image {
+        img {
+            filter: grayscale(80%);
+        }
     }
 }
 
@@ -273,12 +280,12 @@
     }
 
     &__big-text {
-        @include flex-center;
+        @include flex-center-wrap;
         gap: 101px;
     }
 
     &__skills {
-        @include flex-center;
+        @include flex-center-wrap;
         gap: 74px;
         margin-top: 60px;
     }
@@ -357,17 +364,17 @@
 
     &__examples {
         width: 100%;
-        @include grid;
+        @include grid-center;
         padding: 0 80px;
         column-gap: 17px;
         row-gap: 24px;
-        grid-template-columns: repeat(3, 415px);
+        grid-template-columns: repeat(auto-fit, 415px);
     }
 }
 
 .portfolio-btns {
     &__buttons {
-        @include flex-center;
+        @include flex-center-wrap;
         gap: 24px;
     }
 
@@ -450,29 +457,17 @@
     }
 }
 
-.contact-with-me {
-    &__same-forms {
-        @include flex;
+.form {
+    @include flex-list;
+    gap: 30px;
+    p {
+        @include flex-center-wrap;
         gap: 30px;
-        border-radius: var(--button-radius);
-        background: rgba(255, 255, 255, 0.04);
-        padding: 14px 24px;
-        font-weight: var(--font-weight-500);
-        font-size: var(--text-size-small);
-        color: var(--text-grey-hover);
-    }
-
-    &__none-same-forms {
-        height: 162px;
-        border-radius: var(--button-radius);
-        background: rgba(255, 255, 255, 0.04);
-        padding: 14px 24px;
-        font-weight: var(--font-weight-500);
-        font-size: var(--text-size-small);
-        color: var(--text-grey-hover);
-    }
-
-    &__none-same-forms > :nth-child(1) {
-        height: 54px;
+        input {
+            border-radius: 8px;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-grey-hover);
+        }
     }
 }
