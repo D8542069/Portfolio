@@ -30,6 +30,7 @@
     }
 
     &__portfolio {
+
         width: 100%;
         @include flex-list-center;
         gap: 70px;
@@ -366,7 +367,7 @@
         width: 100%;
         @include grid-center;
         padding: 0 80px;
-        column-gap: 17px;
+        column-gap: 17.5px;
         row-gap: 24px;
         grid-template-columns: repeat(auto-fit, 415px);
     }
@@ -437,13 +438,33 @@
         font-size: var(--text-size-normal);
     }
 
+
     &__contact-with-me {
         @include flex-list;
-        gap: 30px;
     }
 
-    &__contact-with-me > div {
-        width: 100%;
+}
+
+// я перенес форму так как ты из-за не закрытого секшина всё перепутал
+.form{
+        @include flex-list-center;
+        gap: 30px;
+    p {
+        @include flex-center-wrap; // center-wrap не забывай про врапы, они нужны там где элементы обязательно должны смещаться
+        padding: 14px 24px;
+        gap: 30px;
+    } // стили для инпута пишутся на инпутах а не на их контейнера
+
+    p>input{
+        width: 391px; //высоту и ширину я поставил
+        height: 54px; //высоту и ширину я поставил
+        padding: 10px; // нужен чтобы плейсхолдер и текст отсутпились
+        color: white; // нужен чтобы менялся цвет у текста который ты ввел в инпут
+        border-radius: var(--button-radius);
+        background: rgba(255, 255, 255, 0.04);
+    }
+
+    button {
         @include flex-end;
     }
 
@@ -477,7 +498,6 @@
         }
     }
 
-
     &__none-same-forms > input:nth-last-child(1) {
         height: 162px;
     }
@@ -494,4 +514,5 @@
         }
     }
 }
+
 

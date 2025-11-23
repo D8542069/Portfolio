@@ -251,6 +251,7 @@ body > h1, h2, h3, h4, h5, h6, p, span {
 
 .header {
   width: 100%;
+  padding: 57px 120px 0 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,6 +278,19 @@ body > h1, h2, h3, h4, h5, h6, p, span {
   font-family: var(--second-family);
   font-weight: var(--font-weight-700);
 }
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .header__btn-cont > button {
   border-radius: var(--button-radius);
   padding: 12px 40px;
@@ -299,6 +313,7 @@ body > h1, h2, h3, h4, h5, h6, p, span {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 60px;
   -webkit-column-gap: 60px;
      -moz-column-gap: 60px;
           column-gap: 60px;
@@ -862,10 +877,11 @@ body > h1, h2, h3, h4, h5, h6, p, span {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 80px;
-  -webkit-column-gap: 17px;
-     -moz-column-gap: 17px;
-          column-gap: 17px;
+  -webkit-column-gap: 17.5px;
+     -moz-column-gap: 17.5px;
+          column-gap: 17.5px;
   row-gap: 24px;
+  grid-template-columns: repeat(auto-fit, 400px);
   grid-template-columns: repeat(auto-fit, 415px);
 }
 
@@ -952,10 +968,45 @@ body > h1, h2, h3, h4, h5, h6, p, span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 30px;
 }
-.connection__contact-with-me > div {
-  width: 100%;
+.form p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 14px 24px;
+  gap: 30px;
+}
+.form p > input {
+  width: 391px;
+  height: 54px;
+  padding: 10px;
+  color: white;
+  border-radius: var(--button-radius);
+  background: rgba(255, 255, 255, 0.04);
+}
+.form button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
